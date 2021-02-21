@@ -7,6 +7,8 @@ from .models import Product, Ingredient
 class ProductAdmin(admin.ModelAdmin):
     pass
 
+# test
+
 
 admin.site.register(Product)
 admin.site.register(Ingredient)
