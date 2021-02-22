@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {TestComp} from "./components/TestComp";
+import ProductsPage from "./components/ProductsPage";
 import styled from "styled-components";
 
 const App = () => {
 	return (
 		<Root>
 			<Switch>
-				<Route exact path="/" component={TestComp} />
+				<Route exact path="/" component={ProductsPage} />
 			</Switch>
 		</Root>
 	);
