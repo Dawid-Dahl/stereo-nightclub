@@ -14,7 +14,22 @@ const Footer = () => {
 	);
 };
 
-const FooterWrapper = styled.footer``;
-const FooterInfo = styled.p``;
+const FooterWrapper = styled.footer`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 4em;
+`;
+
+const FooterInfo = styled.p`
+	font-size: var(--font-size-small);
+	padding: 0 1em;
+	border-right: 1px solid white;
+	font-weight: bold;
+
+	:nth-child(4) {
+		border-right: unset;
+	}
+`;
 
 export default Footer;

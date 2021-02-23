@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "./Header";
 import ProductGrid from "./ProductGrid";
 import PageSelector from "./PageSelector";
@@ -20,7 +20,7 @@ const ProductsPage = () => {
 
 const Wrapper = styled.div`
 	background-color: var(--main-color);
-	height: 100vh;
+	height: 100%;
 `;
 
 export default ProductsPage;
