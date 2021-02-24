@@ -15,7 +15,10 @@ ProductGrid.propTypes = {
 	products: PropTypes.array.isRequired,
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+	margin: 0 auto;
+	max-width: 55em;
+`;
 
 const Grid = styled.div`
 	display: grid;

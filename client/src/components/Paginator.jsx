@@ -28,6 +28,7 @@ const Wrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	height: 100%;
+	margin: 0.5em 0 1em 0;
 `;
 
 Paginator.propTypes = {

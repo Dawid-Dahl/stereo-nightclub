@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 	height: 17em;
 	background-image: url("https://i.imgur.com/41Sus9J.jpg");
 	background-size: cover;
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 
 	h1 {
