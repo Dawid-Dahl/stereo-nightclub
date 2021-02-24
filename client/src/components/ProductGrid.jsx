@@ -1,56 +1,37 @@
 import React from "react";
-import Product from "./Product";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
-const range = (s, e) => (e <= s ? [e] : [...range(s, e - 1), e]);
-
-const dummyProduct = (id, title, image, description, price) => ({
-	id,
-	title,
-	image,
-	description,
-	price,
-});
-
-const dummyData = range(1, 9).map((x, i) =>
-	dummyProduct(
-		i,
-		"The best drink",
-		"https://bit.ly/3kb2nPg",
-		"Information about the drink",
-		15.99
-	)
-);
-
-export const ProductGrid = () => {
+export const ProductGrid = ({displayProducts, products}) => {
 	return (
 		<Wrapper>
-			<Grid>
-				{dummyData.map(({id, title, image, description, price}) => {
-					return (
-						<Product
-							key={id}
-							title={title}
-							image={image}
-							description={description}
-							price={price}
-						/>
-					);
-				})}
-			</Grid>
+			<Grid>{displayProducts(products)}</Grid>
 		</Wrapper>
 	);
+};
+
+ProductGrid.propTypes = {
+	displayProducts: PropTypes.func.isRequired,
+	products: PropTypes.array.isRequired,
 };
 
 const Wrapper = styled.div``;
 
 const Grid = styled.div`
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	grid-template-columns: repeat(3, 1fr);
 	gap: 0.5em;
 	align-items: center;
 	justify-content: center;
 	margin: 1em 2em;
+
+	@media only screen and (max-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media only screen and (max-width: 480px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 `;
 
 export default ProductGrid;

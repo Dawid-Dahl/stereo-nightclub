@@ -26,6 +26,7 @@ const FooterInfo = styled.p`
 	padding: 0 1em;
 	border-right: 1px solid white;
 	font-weight: bold;
+	text-align: center;
 
 	:nth-child(4) {
 		border-right: unset;
