@@ -7,32 +7,13 @@ import Footer from "./Footer";
 import styled from "styled-components";
 import Product from "./Product";
 
-const range = (s, e) => (e <= s ? [e] : [...range(s, e - 1), e]);
-
-const dummyProduct = (id, title, image, description, price) => ({
-	id,
-	title,
-	image,
-	description,
-	price,
-});
-
-const dummyData = range(1, 50).map((x, i) =>
-	dummyProduct(
-		i,
-		"The best drink",
-		"https://bit.ly/3kb2nPg",
-		"Information about the drink",
-		15.99
-	)
-);
-
 const ProductsPage = () => {
 	const [products, setProducts] = useState([]);
 	const [pageNumber, setPageNumber] = useState(0);
 
-	useEffect(() => {
-		setProducts(dummyData);
+	useEffect(async () => {
+		const data = await (await fetch("api/products/")).json();
+		setProducts(data);
 	}, []);
 
 	const productsPerPage = 9;
