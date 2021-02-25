@@ -13,7 +13,7 @@ const ProductsPage = () => {
 
 	useEffect(async () => {
 		const data = await (await fetch("api/products/")).json();
-		setProducts(data);
+		setProducts(data.reverse());
 	}, []);
 
 	const productsPerPage = 9;

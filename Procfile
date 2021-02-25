@@ -1,0 +1,1 @@
+web: gunicorn gunicorn stereo_nightclub.wsgi

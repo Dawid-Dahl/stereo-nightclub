@@ -30,6 +30,7 @@ const Wrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	height: 80%;
 
 	h1 {
 		margin: 0.8em 0 0.2em 0;
@@ -53,9 +54,10 @@ const Overlay = styled.div`
 	justify-content: flex-end;
 	flex-direction: column;
 	width: 80%;
-	height: 60%;
+	height: 70%;
 	transition: opacity 0.2s;
 	opacity: 0;
+	cursor: pointer;
 
 	:hover {
 		opacity: 1;
