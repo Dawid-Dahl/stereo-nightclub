@@ -1,1 +1,1 @@
-web: gunicorn gunicorn stereo_nightclub.wsgi
+web: gunicorn stereo_nightclub.wsgi
