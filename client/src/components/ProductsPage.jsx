@@ -46,6 +46,7 @@ const ProductsPage = () => {
 
 const Wrapper = styled.div`
 	background-color: var(--main-color);
+	min-height: 100vh;
 	height: 100%;
 `;
 

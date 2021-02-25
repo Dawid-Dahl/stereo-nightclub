@@ -26,7 +26,7 @@ SECRET_KEY = 'w@glgu#swd^$4^w7t!&)sdwj+7dm@16b+zvt$f^j#36qvj6-zk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stereo-nightclub.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['stereo-nightclub.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -135,3 +137,7 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     )
 }
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:1234"
+]
