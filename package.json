@@ -1,0 +1,13 @@
+{
+    "name": "myapp",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "echo LOOOOL"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "cacheDirectories": [
+      "node_modules",
+      "react/node_modules"
+    ]
+  }
