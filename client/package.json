@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "postinstall": "npm run build"
   },
   "author": "Dawid Dahl",
   "license": "ISC",

@@ -2,7 +2,7 @@
     "name": "myapp",
     "version": "1.0.0",
     "scripts": {
-      "build": "echo LOOOOL"
+      "build": "cd client && npm install && npm run build"
     },
     "dependencies": {},
     "devDependencies": {},
