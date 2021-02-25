@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm build"
   },
   "author": "Dawid Dahl",
   "license": "ISC",
